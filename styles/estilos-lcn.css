@@ -1,0 +1,926 @@
+
+:root{
+    /*La Cossa Nostra*/
+    --first-color: rgb(177, 173, 173);
+    --second-color: rgb(153, 98, 98);
+  
+    --link-color: aquamarine;
+   
+    --black-play: black;
+   
+    --bg-color: rgb(79, 89, 112);
+    --tapa-album-color: rgb(253, 49, 35);
+  }
+  
+  @font-face {
+    font-family: "Invernaculus";
+    src: url("../assets/Invernaculus.ttf");
+  }
+  
+  html{
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-weight: 100;
+      font-size: 16px;
+      font-family: "Invernaculus";
+  }
+  
+  *,*::after, *::before {
+           box-sizing: inherit;
+  }
+  
+  body{
+    margin: 0%;
+    padding: 0%;
+  }
+  
+  .body-home{
+      margin: 0;
+      padding: 0;  
+      background: linear-gradient(285deg, rgb(218, 216, 216) 0%, black 55%);
+    }
+  
+  
+     
+  img{
+      max-width: 100%;
+      height: auto;
+    }
+  
+  
+  
+  
+  
+  .second-color{
+    color: var(--second-color);
+  }
+  
+  
+  .invisible{
+    visibility: hidden;
+    color: white;
+  }
+  
+    
+  
+  .pseudo-header .a-home{
+    
+    font-size: 1.5rem;
+  }
+  
+  /*------------------------------------------------------------*/
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /*------------ COMPARTIR---------------*/
+  
+  
+  .compartir{
+    width: 45vw;
+    height: 40px;
+    margin-right: 0px;
+    color: var(--second-color);
+    padding-top: 1px;
+    padding-bottom: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  
+  .compartir div{
+    margin-top: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 100;
+    font-size: 0.9rem;
+    }
+  
+  .redes-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+  
+  .redes{
+    display: inline-block;
+    width: auto;
+    height: 10px;
+    font-size: 0.75rem;
+    text-align: center;
+    top: -15px;
+    color: var(--first-color);
+    text-decoration: none;
+    font-weight: 100;
+    transition: color 0.3s ease-in;
+  }
+  
+  .redes:hover{
+    color: rgb(164, 78, 78);
+  }
+  
+  
+  
+  /*---------------------------------------------*/
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /*.................  DISCOGRAFÍA..................*/
+  
+  
+              /* ----generales para album -------- */
+  
+  
+  
+  
+  
+      /*..movimiento de la tapa del disco  ---*/
+  
+  @keyframes MovimientoAlternado{
+    0%{
+     transform-origin: 0 0;
+     transform: perspective(1000px) rotateY(0deg); 
+       }
+  
+    20%{
+      transform-origin: 0 0;
+      transform: perspective(1000px) rotateY(-65deg); 
+       }
+  
+    50%{
+      transform-origin: 0 0;
+      transform: perspective(1000px) rotateY(-30deg); 
+      }
+    70%{
+      transform-origin: 0 0;
+      transform: perspective(1000px) rotateY(-55deg); 
+       }
+    80%{
+      transform-origin: 0 0;
+      transform: perspective(1000px) rotateY(0deg); 
+       }
+    
+    100%{
+      transform-origin: 0 0;
+      transform: perspective(1000px) rotateY(0deg); 
+        }
+  }
+  
+  
+  .movimiento-alternado{
+    animation: MovimientoAlternado 15s ease-in infinite;
+  }
+  
+  
+  .text-shadow{
+    text-shadow: 4px 0 8px black;
+  }
+  
+  
+  .discography-container{
+    position: relative;
+    z-index: 0;
+    width: 270px;
+    height: auto;
+    margin-top: -100px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 4s;
+  }
+  
+  
+  .album-name{
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    font-size: 23px;
+    font-weight: 100;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    color: var(--first-color);
+  }
+  
+  .albums{
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  
+  
+  
+  .album-container{
+    margin: 0px auto 0 auto;
+    padding: 0px;
+    width: 243px;
+    height: 243px;/*según el caso*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transform: perspective(1000px) scale(0.9);
+    font-size: 14px;
+     }
+  
+  
+  .album-individual{
+    margin-top: 50vh;
+    margin-bottom: -50px;
+    height: 400px;
+    padding-top: 20px;
+  }
+    
+  
+  .album-activado{
+   margin-bottom: 280px;
+   transition: 4s;
+  }
+  
+  
+  .discography-grande{
+    transition: 4s;
+    height: 1450px;
+  }
+  
+  
+  .etiqueta-lcn{
+    position: absolute;
+    left: 45.3%;
+    top: 8%;
+    font-size: 10px;
+    color: aliceblue;
+  }
+  
+  
+  
+  .ul{
+    width: 280px;
+    height: 280px;
+    border-radius: 4px;
+    position: relative;
+    top: -40px;
+    z-index: 1;
+  }
+  
+  .padding-top-20px{
+    padding-top: 20px;
+  }
+  
+  
+  .padding-top-30px{
+    padding-top: 30px;
+  }
+  
+  
+  .ul li{
+    list-style: none;
+    margin: 2px 0;
+    height: 20px;
+    position: relative;
+    left: -20px;
+  }
+  
+  .ul a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 17px;
+    text-align: center;
+    transition: color 0.2s ease-in;
+  }     
+  
+     
+  .btn-play{
+    width: 15px;
+    height: 15px;
+    background-color: var(--first-color);
+    clip-path: polygon(50% 0%, 50% 100%, 100% 50%);
+    transition: transform 0.2s linear;
+  }
+  
+  .btn-play-border{
+    border: 2px solid rgb(70, 69, 69);
+    background-color: var(--black-play);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    padding-top: 3px;
+    padding-right: 6px;
+  }
+  
+  
+  .btn-play:hover{
+    transform: scale(1.2);
+    background-color: rgb(169, 100, 136);
+  }
+  
+  
+  
+  
+  /*para abrir todas las tapas*/
+  
+  
+  @keyframes abrir-tapa{
+    0%{
+      transform-origin: 0 0;
+      transform: perspective(2000px) rotateY(0deg);
+    }
+    100%{
+      transform-origin: 0% 0%;
+      transform: perspective(2000px) rotateY(-88deg);
+    }
+  }
+  
+  
+  
+  
+   .tapa-mov-alternado{
+    position: absolute;
+    z-index: 80;
+   }
+  
+  
+  .abrir-tapa{
+    animation: abrir-tapa 3s ease-in-out both;
+  }
+  
+  
+  .play-track{
+    margin: 15px auto;
+  }
+  
+  .rotate-disc{
+    position: absolute;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 5;
+  }
+  
+  
+  
+  
+  
+  
+  
+  /*-----------  DISCO  --------*/
+  
+  
+  .disc-container-total{
+    position: relative;
+    width: 302px;
+    height: 302px;
+    top: -272px; /*lo coloca debajo del estuche del disco*/
+    left: -50px;
+    background-color: rgb(60, 98, 98, 0);
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden; /*NO OLVIDAR DE PONER*/
+    transform: scale(0.6);
+    z-index: 1;
+  }
+  
+  
+  .container-circle{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 90%;
+    position: relative;
+  }
+  
+  
+  @keyframes Disc-Animation{
+      0%{
+      transform: perspective(1000px) rotateY(0deg) scale(0.5) translateX(0px);
+      }
+      14%{
+      transform: perspective(1000px) rotateY(0deg) scale(0.55) translateX(0px);
+    
+      }
+      35%{
+        transform: perspective(1000px) rotateY(40deg) scale(0.6) translateX(-20px);
+      
+        }
+      36%{
+      
+          transform: scale(0.63) perspective(1000px) rotateY(40deg) translateX(-50px);
+      }
+      50%{
+      
+          transform: scale(0.63) perspective(1000px) rotateY(40deg) translateX(270px);
+      }
+      80%{
+      
+          transform: scale(0.5) perspective(1000px) translateX(150px) translateY(320px) rotatez(0deg);
+      }
+      98%{
+      
+        transform: scale(0.9) perspective(1000px) translateX(38px) translateY(320px);
+      }
+  
+      100%{
+      
+        transform: scale(0.9) perspective(1000px) translateX(38px) translateY(320px);
+      }
+  }
+  
+  
+  
+  .disc-animation{
+    position: relative;
+    z-index: 2;
+    animation: Disc-Animation 10s ease-in-out both;
+    animation-play-state: running;
+  }
+  
+  
+  
+  
+  @keyframes Disc-Rotation{
+    0%{
+      z-index: 10;
+      transform: scale(0.7) perspective(1000px) translateX(65px) translateY(370px) rotateZ(0deg);
+     }
+  
+    100%{
+      z-index: 10;
+      transform: scale(0.7) perspective(1000px) translateX(65px) translateY(370px) rotateZ(360deg);
+     }
+  }
+  
+  .agujero{
+    
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background-image: radial-gradient(circle 6.5px, rgb(26, 28, 30) 0%, rgb(11, 13, 15) 85%, rgb(243, 240, 240) 86%);
+    border-radius: 50%;
+    top: 130px;
+    left: 130px;
+    z-index: 10;
+  }
+  
+  
+    
+  .conico-index{
+    position: absolute;
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background-image: conic-gradient(from 90deg, transparent 0%, transparent 7%, rgba(205, 211, 205, 0.4) 15%, transparent 23%, transparent 57%, rgba(205, 211, 205, 0.4) 65%, transparent 73%);
+    background-image: conic-gradient(from 60deg, transparent 0%, transparent 7%, rgba(224, 227, 224, 0.4) 15%, transparent 23%, transparent 57%, rgba(193, 195, 193, 0.4) 65%, transparent 73%);
+    z-index: -1;  
+    top: 0px;
+    left: 0px;
+  }
+  
+  
+  .disco-inclinado{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  
+  @keyframes rotatex-50{
+    0%{
+      transform: perspective(1000px) rotateX(0deg);
+    }
+    100%{
+      transform: perspective(1000px) rotateX(30deg);
+    }
+  }
+  
+  
+  .rotatex-50{
+    animation: rotatex-50 1s linear 8s both;
+  }
+  
+  
+  .tapa-index{
+    top: 35%;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+   }
+  
+  
+  .tapa-index img{
+    border-radius: 50%;
+    width: 30%;
+    height: 30%;
+    background-color: black;
+  }
+  
+  
+  .tapa{
+    top: 36.5%;
+    left: 18%;
+    text-align: center;
+    width: 180px;
+    height: 180px;
+    position: absolute;
+  }
+  
+  
+  .img-etiqueta{
+    border-radius: 50%;
+    width: 34%;
+    height: 34%;
+    
+    background-image: url("../assets/dramatico_y_nocturno.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  
+    position: relative;
+    left: 33.5%;
+    top: -4px;
+    z-index: 15;
+    animation: Disc-Rotating 1.818s linear 3s infinite;
+  }
+  
+  
+  .img-etiqueta-hambre{
+    border-radius: 50%;
+    width: 30%;
+    height: 30%;
+    left: 35.5%;
+    background-color: rgb(5, 74, 253);
+    position: relative;
+    font-size: 9px;
+    font-weight: 800;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    padding-top: 23px;
+    z-index: 15;
+    animation: Disc-Rotating 1.818s linear 3s infinite;
+  }
+  
+  
+  .nombre-album-chico{
+    position: absolute;
+    color: wheat;
+    font-size: .6rem;
+  }
+  
+  
+  .titulo-album{
+    position: absolute;
+    display: block;
+    width: 150px;
+    text-align: center;
+    top: -110px;
+    left: 25%;
+    color: var(--first-color);
+  
+  }
+  
+  
+  @keyframes Visited-Disc{
+    0%{
+      transform: perspective(1000px) rotateY(0deg) scale(1) translateX(0px);
+      }
+  
+    10%{
+      transform: perspective(1000px) rotateY(0deg) scale(1) translateX(0px);
+       }
+   
+    30%{
+      transform: perspective(1000px) rotateY(40deg) scale(0.67) translateX(-110px);
+       }
+   
+    60%{
+     transform: perspective(1000px) rotateY(40deg) scale(0.67) translateX(-110px);
+       }
+   
+    80%{
+      transform: perspective(1000px) rotateY(0deg) scale(1) translateX(0px);
+       }
+  
+    100%{
+      transform: perspective(1000px) rotateY(0deg) scale(1) translateX(0px);
+        }
+   }
+  
+      
+  
+  .visited-disc-1{
+    animation-name: Visited-Disc, Correr-Album-1;
+    animation-delay: 0s, 11s;
+    animation-duration: 14s, 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+   }
+  
+   
+   .visited-disc-2{
+    animation-name: Visited-Disc, Correr-Album-2;
+    animation-delay: 0s, 11s;
+    animation-duration: 14s, 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+   }
+  
+  
+  .visited-disc-3{
+    animation-name: Visited-Disc, Correr-Album-3;
+    animation-delay: 0s, 11s;
+    animation-duration: 14s, 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+   }
+  
+  
+  
+  
+  .opacity-0-3{
+    opacity: 0.3;
+  }
+  
+    
+  
+  /*----------------------- fin album general----------------------------------*/
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /*--------------------  hacer esto para CADA ALBUM   -----------------------------*/
+  
+  
+  .album-hambre{
+    background:  url("../assets/hambre.jpg");
+    background-repeat: no-repeat;
+    background-size: 102.5%;
+    background-position: 53% 50%;
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    z-index: 10;
+  }
+  
+  
+  .bg-insecta{  /*  interior-album   */
+    position: absolute;
+    background-color: black;
+    background-color: black;
+    background-image: url("../assets/hambre-fondo.jpg");
+    background-size: 100%;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    top: -18px;
+   }
+  
+   
+  .nombre-disco{
+    color: rgb(227, 222, 222);
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 20px auto;
+  }
+  
+  
+  .nombre-disco-interior{
+    color: rgb(227, 222, 222);
+    font-size: 1.3rem;
+    text-align: center;
+    margin: -20px auto 40px auto;
+  }
+  
+  
+  
+  .track-name-la-cossa-nostra {    
+    width: 240px;
+    font-size: 1rem;
+    transition: transform 0.2s ease-in;
+    font-weight: 100;
+    color: rgb(188, 184, 184);
+  }
+  
+  
+  
+  .track-name-la-cossa-nostra:hover{
+    color: rgb(166, 165, 165);;
+  }
+  
+  
+  
+  
+  .disc-translate-insecta{
+    color: rgb(30, 30, 31);
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    z-index: 20;
+    background-image: repeating-radial-gradient( var(--tapa-album-color) 0% 3%,rgb(248, 76, 84) 3.5% 4.5%);
+  }
+  
+  /*------------------------------------------------------------*/
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /*--------FUNCIONALIDADES---------*/
+  
+  .boton-normal{
+    background-color: rgb(197, 143, 43, 0);
+    width: 270px;
+    height: 270px;
+    border: solid 3px rgb(0, 0, 0, 0);
+   }
+  
+  
+  .box-shadow{
+    box-shadow: -8px -8px 1rem 0.02rem rgb(46, 45, 45);
+  }
+  
+  
+  .contact-card h5{
+    font-size: 24px;
+    font-weight: 100;
+  }
+  
+  
+  .email a{
+    color: aqua;
+    font-family: 'invernaculus', Courier, monospace;
+    font-size: 18px;
+  }
+  
+  
+  .running{
+    animation-play-state: running;
+  }
+    
+  
+  
+  
+  
+  
+  /*-------SECTIONS CONTAINER TOTAL  ---------*/
+  
+  .sections-container-total{
+    padding-top: 50px;
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      /*---------   VERSIÓN TABLET  --------------------------------------*/
+  
+  
+   
+  
+  @media screen and (min-width: 768px){
+    
+  
+    .compartir span{
+      font-size: 18px;
+    }
+  
+    .redes{
+      font-size: 13px;
+    }
+  
+  
+    .position-central{
+      position: relative;
+      width: 340px;
+      height: 340px;
+      left: 0%;
+      top: -86px;
+    }
+  
+    .inf2-position-central{
+      position: absolute;
+      width: 340px;
+      height: 340px;
+      top: 86px;
+    }
+  
+  /* 
+  
+  
+    .galeria{
+      width: 290px;
+      height: 550px;
+      margin-left: auto;
+      margin-top: 235px;
+    
+    margin-right: auto;
+    
+     }
+      
+     .galeria-grande1{
+      height: auto;
+     }
+     .galeria-grande2{
+      height: auto;
+     } */
+   
+  
+    }
+  
+  
+  
+  /*--------versión DESKTOP-----------*/
+  
+  
+  
+  @media screen and (min-width: 1024px){
+  
+    .pseudo-header .a-home{
+      margin-top: -50px;
+      font-size: 2.5rem;
+    }
+  
+    .compartir{
+      position: fixed;
+      width: 100%;
+      width: 180px;
+      top: 5px;
+      left: 10px;
+      }
+  
+    .compartir .redes{
+      font-size: .9rem;
+      }
+  }
+  
+  
+  
+  
+    
+  
+  
