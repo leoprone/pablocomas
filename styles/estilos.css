@@ -122,16 +122,18 @@ height: 100%;
     padding: 0%;
   }
   
+
   .body-home{
       margin: 0;
        padding: 0;  
        overflow-x: hidden;
    
      
-     background: linear-gradient(90deg, black 0%, rgb(161, 174, 200) 50%, black 100%);
+     background: linear-gradient(90deg, black 0% 10%, rgb(47, 50, 73) 25%, rgb(144, 181, 255) 40% 60%, rgb(47, 50, 73) 75%, black 90%);
  
     
       }
+  
   
   
      
