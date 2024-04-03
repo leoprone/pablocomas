@@ -1,0 +1,408 @@
+ /* ********** Menu ********** */
+ .menu-btn {
+    border: 0;
+    cursor: pointer;
+    background-color: rgb(21, 21, 21, 0);
+    margin-left: 75%;
+    margin-top: 5px;
+        
+  }
+  
+  .menu-btn svg {
+    fill: var(--second-color);
+     
+  }
+  
+  .menu {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(5, 5, 5, 0.75);
+   
+    opacity: 0;  /*solo se verá cuando sea activo*/
+    pointer-events: none;
+    transition: opacity 0.8s ease;
+    z-index: -1;
+  }
+  
+  .menu.is-active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .menu a {
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-align: center;
+    text-decoration: none;
+    color: var(--first-color);
+  }
+  
+  .menu a:hover {
+    color: gray;
+    font-size: 1.5rem;
+  }
+
+  .none {
+    display: none;
+  }
+ 
+  
+  @media screen and (min-width: 1024px) {
+    
+    
+    
+    .menu-btn {
+      display: none;
+    }
+  
+    .menu {
+      position: sticky;
+      width: auto; /*que el ancho se adapte al nª enlaces que tenga*/
+      flex-direction: row;
+      opacity: 1;
+      pointer-events: auto;
+      top: 0;
+      left: 75%;
+     padding-top: 5px;
+      z-index: 0; /*(lo puse yo)*/
+    }
+  
+    .menu a {
+        font-size: 1.2rem;
+      padding: 0 0.4rem;
+      color: var(--first-color);
+      
+    }
+  
+    .menu a:last-child { /*para igualar los paddings del último enlace
+      con el del iz del logo*/
+      padding-right: 0;
+      margin-right: 1rem;
+    }
+  
+    .menu a:hover {
+      background-color: transparent;
+      font-size: 1.2rem;
+      
+    }
+    
+  }
+  
+
+
+  .main{
+    padding-top: 90px;
+  }
+
+  
+ 
+  .pseudo-header{
+    height: 50px;
+    border-radius: 0 0 -20% -20%;
+    position: fixed;
+    width: 100%;
+    z-index: 150;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .la-cossa-nostra a{
+    text-decoration: none;
+    display: block;
+    color: rgb(236, 221, 221);
+    font-weight: 100;
+    text-shadow: 5px 0px 5px black;
+    font-size: 1.3rem;
+    margin-top: 10px;
+  
+
+  }
+  
+  .h1-home{
+    text-decoration: none;
+    display: block;
+    color: rgb(236, 221, 221);
+    font-weight: 100;
+    
+    text-shadow: 5px 0px 5px black;
+    font-size: 2.5rem;
+    margin-top: 30px;
+    
+   text-align: center;
+  }
+
+@media screen and (min-width: 1024px){
+
+.home-h1{
+margin-top: 50px;
+
+text-align: left;
+padding-left: 20px;
+width: 320px;
+margin-left: 0px;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+}
+
+
+.pseudo-header a{
+font-size: 1.5rem;
+
+}
+
+}
+
+
+.cancion-container{
+width: 100vw;
+height: 100vw;
+background-color: rgb(238, 78, 78);
+box-shadow: 0rem 0rem 5rem 5rem white;
+
+
+}
+
+.canciones{
+
+text-align: center;
+font-size: 2.5rem;
+}
+
+
+
+
+/*-------------HEADER-----------------------------*/
+
+
+.header {
+position: fixed;
+left: 0;
+bottom: 0;
+z-index: 999;
+background-color: rgb(202, 236, 224, 0);
+
+width: 100%;
+height: 40px;
+
+}
+
+.header > .container {
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+}
+
+
+
+
+
+
+
+/*Media query versión desktop*/
+
+@media screen and (min-width: 1024px) {
+
+
+
+.footer {
+  margin-bottom: 0; /*que el footer quede abajo de nuevo, ya que en
+  desktop no está el header abajo*/
+}
+
+.header {
+  position: sticky; /*no tapa el sig elem, como sí lo hace fixed*/
+  top: 0;
+  left: 63vw;
+ 
+  width: 35vw;
+  padding: 0.5rem;
+  height: calc(var(--header-height) - 0.2rem);
+  
+}
+
+.menu {
+    background-color: rgb(211, 22, 22, 0);
+}
+
+}
+
+
+
+/*---------------------CONTACTO-----------------------*/
+
+
+
+.contact-card {
+
+margin: 200px auto 20px auto;
+
+
+width: 100%;
+height: auto;/*según el caso*/
+display: flex;
+flex-direction: column;
+justify-content: space-around;/*reparte el
+espacio sobrante considerando las orillas*/
+align-items: center;
+position: relative;
+
+z-index: 1;
+}
+
+.contact-card > svg{
+
+width: 30px;
+height: 30px;
+}
+
+
+.contact-card > small {
+margin-top: -1rem;
+font-size: 20px;
+margin-bottom: 2rem;
+
+}
+.contact-card > small a{
+
+text-decoration: none;
+text-align: center;
+transition: color 0.3s ease-in;
+color: rgb(175, 170, 170);
+
+}
+
+.contact-card small a:hover{
+color: rgb(123, 255, 255);
+
+}
+
+
+.social-media{
+
+display: flex;
+flex-direction: column;
+}
+
+.social-media > a{
+margin: 10px 0;
+
+
+
+}
+
+
+
+
+
+
+/*------------------formulario de contacto--------------------*/
+
+
+.contact-form {
+margin: 2rem auto;
+padding: 1rem;
+max-width: 500px;
+
+}
+
+.contact-form > * { /*a todos los hijos directos
+les ponemos display block*/
+padding: 0.5rem;
+margin: 1rem auto;
+display: block;
+width: 100%;
+
+}
+
+.contact-form input,
+.contact-form textarea {
+font-size: 0.85rem;
+font-family: var(--font);
+color: rgb(204, 201, 201);
+background-color: rgb(23, 23, 23, 0.3);
+}
+
+.contact-form input {
+border: 0; /*primero le quitamos todos los bordes*/
+
+/*ahora damos borde abajo*/
+border-bottom: thin solid var(--gray-dark-color);
+border-radius: 5px;
+}
+
+.contact-form textarea {
+border: thin solid var(--gray-dark-color);
+resize: none;  /*que no cambie de tamaño*/
+border-radius: 5px;
+}
+
+.contact-form input[type="submit"] {
+margin-top: 0;
+cursor: pointer; /*que aparezca la mano*/
+transition: all 0.5s ease-out;
+border-radius: 5px;
+}
+
+.contact-form input[type="submit"]:hover {
+opacity: 0.75;
+}
+
+.contact-form *::placeholder { /*a todos los elem hijos*/
+color: rgb(107, 105, 105);
+
+}
+
+.contact-form h3{
+color: var(--second-color);
+font-weight: 200;
+text-align: center;
+font-size: 1.1rem;
+
+
+}
+
+
+
+
+/*-----------------FOOTER-------------*/
+
+
+.footer {
+/*margin-bottom: var(--header-height); /*para que se vea en mobile y no 
+lo tape el header */
+padding-top: 15px;
+text-align: center;
+
+z-index: 100;
+position: relative;
+height: 48px;
+background-color: rgb(27, 27, 27);
+border-radius: 20% 20% 0 0;
+}
+
+footer a{
+font-family: 'Courier New', Courier, monospace;
+color: rgb(92, 90, 101);
+text-decoration: none;
+}
+.desarrollo{
+font-family: 'Times New Roman', Times, serif;
+color: gray;
+font-size: .6rem;
+}
+
+.desarrollador{
+font-size: .6rem;
+font-style: italic;
+font-weight: 400;
+color: rgb(151, 153, 155);
+}
+
