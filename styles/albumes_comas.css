@@ -1,0 +1,1073 @@
+ 
+  *,*::after, *::before {
+    box-sizing: inherit;
+}
+
+
+
+
+
+
+
+
+/*.................  DISCOGRAFÍA..................*/
+
+
+            /* ----generales para album -------- */
+
+
+
+.discography-container{
+  position: relative;
+  z-index: 0;
+  width: 270px;
+  height: auto;
+  margin-top: -100px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 4s;
+}
+            
+
+
+
+ /*//////////////////////////   ALBUM    ////////////////////////////////////////////////*/
+
+
+
+.album{
+    /* margin-top: 50vh; */
+    margin-bottom: 70px;
+    height: 400px;
+    padding-top: 20px;
+}
+
+
+
+.album__contenedorFondoTapa{
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    position: relative;
+    z-index: 10;
+}
+
+
+
+
+.contenedorFondoTapa__interno{
+    margin: 0px auto 0 auto;
+    padding: 0px;
+    width: 243px;
+    height: 243px;/*según el caso*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transform: perspective(1000px) scale(0.9);
+    font-size: 14px;
+  }
+
+
+
+
+
+    /*..movimiento de la tapa del disco  ---*/
+
+@keyframes MovimientoAlternado{
+  0%{
+   transform-origin: 0 0;
+   transform: perspective(1000px) rotateY(0deg); 
+     }
+
+  20%{
+    transform-origin: 0 0;
+    transform: perspective(1000px) rotateY(-65deg); 
+     }
+
+  40%{
+    transform-origin: 0 0;
+    transform: perspective(1000px) rotateY(-30deg); 
+    }
+  60%{
+    transform-origin: 0 0;
+    transform: perspective(1000px) rotateY(-55deg); 
+     }
+  80%{
+    transform-origin: 0 0;
+    transform: perspective(1000px) rotateY(0deg); 
+     }
+  
+  100%{
+    transform-origin: 0 0;
+    transform: perspective(1000px) rotateY(0deg); 
+      }
+}
+
+
+.movimiento-alternado{
+  animation: MovimientoAlternado 15s ease-out infinite;
+  
+}
+
+.duration-25s{
+  animation-duration: 25s;
+}
+
+.delay-6s{
+  animation-delay: 6s;
+}
+
+
+.album-activado{
+ margin-bottom: 280px;
+ transition: 4s;
+}
+
+
+
+
+
+
+
+
+/*------------FONDO-----------------*/
+
+.album__fondo{
+  width: 280px;
+  height: 280px;                          
+ 
+ /*  position: relative;
+  top: -40px; */
+
+  position: absolute;
+  border-radius: 4px;
+  box-shadow: -8px -8px 1rem 0.02rem rgb(46, 45, 45);
+  top: -18px;
+  z-index: 1;
+  background-color: black; /* COLOR DE FONDO SI NO HAY IMAGEN DE FONDO*/
+ 
+  
+}
+
+.inset-album{
+  box-shadow: inset 0 0 1rem rgb(13, 13, 13);
+}
+
+.fondo__lista{
+  margin-top: 10px;
+  height: 215px;
+ 
+  overflow-y: scroll;
+  
+}
+
+
+
+@keyframes Animacion-lista{
+  0%{
+    transform: translateY(0%);
+  }
+ 50%{
+    transform: translateY(-50%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+
+
+
+.animacion-lista{
+  animation: Animacion-lista 25s linear infinite;
+  
+}
+
+
+
+.lista__item{
+  list-style: none;
+  height: 37px;
+  position: relative;
+  left: -20px;
+
+}
+
+.item__link{
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+ 
+  text-align: center;
+  margin: 15px auto;
+  transition: color 0.2s ease-in;
+}     
+
+
+/*------------------  TAPA  -----------------*/
+
+
+
+.album__tapa{
+  width: 280px;
+  height: 280px;
+  position: absolute;
+  box-shadow: inset 0 0 1rem rgb(84, 83, 83), inset 5px 5px 2rem white;
+  z-index: 10;
+  
+}
+
+
+
+.album__btnTapa{
+  background-color: rgba(197, 143, 43, 0);
+  width: 270px;                                     
+  height: 270px;
+  border: solid 3px rgb(0, 0, 0, 0);
+ }
+
+
+
+
+
+
+
+/*para abrir todas las tapas*/
+
+
+@keyframes abrir-tapa{
+ 
+  0%{
+    transform-origin: 0 0;
+    transform: perspective(2000px) rotateY(0deg);
+  }
+  100%{
+    transform-origin: 0% 0%;
+    transform: perspective(2000px) rotateY(-88deg);
+  }
+}
+
+
+
+.tapa-mov-alternado{
+  position: absolute;
+  z-index: 80;
+ }
+
+
+.abrir-tapa{
+  animation: abrir-tapa 3s ease-in-out both;
+}
+
+
+
+
+/*--------------------  VINILO  -----------*/
+
+
+.album__contenedor-vinilo{
+  position: relative;
+  width: 302px;
+  height: 302px;
+  top: -272px; /*lo coloca debajo del estuche del disco*/
+  left: -38px;
+ 
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden; /*NO OLVIDAR DE PONER*/
+  transform: scale(0.6);
+  z-index: 1;
+}
+
+
+.contenedor-vinilo__contenedor-medio-vinilo{
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: 90%;
+  position: relative;
+}
+
+
+.album-vinilo{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+
+
+
+.vinilo__agujero{
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-image: radial-gradient(circle 6.5px, rgb(26, 28, 30) 0%, rgb(11, 13, 15) 85%, rgb(243, 240, 240) 86%);
+  border-radius: 50%;
+  top: 133px;
+  left: 133px;
+  z-index: 10;
+}
+
+
+
+.vinilo__etiqueta{
+  border-radius: 50%;
+  top: 34%;
+  left: 34%;
+  text-align: center;
+  width: 88px;
+  height: 88px;
+  position: absolute;                       
+  background-color: black;
+ }
+
+
+
+
+
+
+ @keyframes Disc-Animation{
+   
+  0%{
+    transform: perspective(1000px) rotateY(0deg) scale(0.5) translateX(0px);
+    }
+    14%{
+    transform: perspective(1000px) rotateY(0deg) scale(0.55) translateX(0px);
+  
+    }
+    35%{
+      transform: perspective(1000px) rotateY(40deg) scale(0.6) translateX(-20px);
+    
+      }
+    36%{
+    
+        transform: scale(0.63) perspective(1000px) rotateY(40deg) translateX(-50px);
+    }
+    50%{
+    
+        transform: scale(0.63) perspective(1000px) rotateY(40deg) translateX(270px);
+    }
+    80%{
+    
+        transform: scale(0.5) perspective(1000px) translateX(150px) translateY(320px) rotatez(0deg);
+    }
+    98%{
+    
+      transform: scale(0.9) perspective(1000px) translateX(38px) translateY(320px);
+    }
+
+    100%{
+    
+      transform: scale(0.9) perspective(1000px) translateX(38px) translateY(320px);
+    }
+}
+
+
+
+.disc-animation{
+  position: relative;
+  z-index: 2;
+  animation: Disc-Animation 10s ease-in-out both;
+  animation-play-state: running;
+}
+
+
+
+
+/* 
+  
+.conico-index{
+  position: absolute;
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  background-image: conic-gradient(from 90deg, transparent 0%, transparent 7%, rgba(205, 211, 205, 0.4) 15%, transparent 23%, transparent 57%, rgba(205, 211, 205, 0.4) 65%, transparent 73%);
+  background-image: conic-gradient(from 60deg, transparent 0%, transparent 7%, rgba(224, 227, 224, 0.4) 15%, transparent 23%, transparent 57%, rgba(193, 195, 193, 0.4) 65%, transparent 73%);
+  z-index: -1;  
+  top: 0px;
+  left: 0px;
+} */
+
+
+
+
+
+
+
+
+@keyframes Visited-Disc{
+  0%{
+    transform: perspective(1000px) rotateY(0deg) scale(1) translateX(0px);
+    }
+
+  10%{
+    transform: perspective(1000px) rotateY(0deg) scale(1) translateX(0px);
+     }
+ 
+  30%{
+    transform: perspective(1000px) rotateY(40deg) scale(0.67) translateX(-110px);
+     }
+ 
+  60%{
+   transform: perspective(1000px) rotateY(40deg) scale(0.67) translateX(-110px);
+     }
+ 
+  80%{
+    transform: perspective(1000px) rotateY(0deg) scale(1) translateX(0px);
+     }
+
+  100%{
+    transform: perspective(1000px) rotateY(0deg) scale(1) translateX(0px);
+      }
+ }
+
+/*     
+
+.visited-disc-1{
+  animation-name: Visited-Disc, Correr-Album-1;
+  animation-delay: 0s, 11s;
+  animation-duration: 14s, 3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+ } */
+
+ 
+ .visited-disc-2{
+  animation-name: Visited-Disc, Correr-Album-2;
+  animation-delay: 0s, 11s;
+  animation-duration: 14s, 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+ }
+
+
+/* .visited-disc-3{
+  animation-name: Visited-Disc, Correr-Album-3;
+  animation-delay: 0s, 11s;
+  animation-duration: 14s, 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+ }
+ */
+
+
+  
+
+/*----------------------- fin album general----------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////  específicos de CADA ALBUM  //////////////////////////////////////////*/
+
+
+
+
+
+
+
+/*...........  DRAMÁTICO Y NOCTURNO   .................*/
+
+
+
+
+
+
+.imagenFondo-dramatico-y-nocturno{  /*  FONDO ESPECÍFICO DE CADA ALBUM   */
+  background-image: url("../assets/dramatico_y_nocturno.jpg");                   /*  <-----------------------------------*/
+  background-size: 170%;
+  background-repeat: no-repeat;
+  background-position: 0% 63%;
+  
+}
+
+
+
+
+.fondo__nombreAlbum-dramatico-y-nocturno{
+  color: rgb(227, 222, 222, 0);                    /* <----------------------------------- */
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 20px auto 0px auto;
+}
+ 
+
+
+
+
+.lista__deslizante{
+  background-color: rgba(255, 0, 0, 0);             /*  <-----------------------------------*/
+}
+
+
+
+
+.link__nombreCancion {    
+  width: 240px;
+  font-size: 1rem;                              /*  <-----------------------------------*/
+  transition: transform 0.2s ease-in;
+  font-weight: 100;
+  color: rgb(188, 184, 184);
+}
+
+
+
+.link__nombreCancion:hover{
+  color: rgb(166, 165, 165);;                     /*  <-----------------------------------*/
+}
+
+
+
+
+.link__bordeBtnPlay{
+  border: 2px solid rgb(70, 69, 69);
+  background-color: transparent;
+  width: 22px;
+  height: 22px;                                    /*  <-----------------------------------*/
+  border-radius: 50%;
+  padding-top: 2px;
+  padding-right: 8px;
+  transition: .3s;
+}
+
+
+.link__bordeBtnPlay:hover{
+  background-color: rgba(112, 80, 80, 0.939);          /*  <-----------------------------------*/
+}
+
+ 
+.link__btnPlay{
+  width: 14px;
+  height: 14px;                                             /*  <-----------------------------------*/
+  background-color: rgb(171, 169, 169);
+  clip-path: polygon(50% 0%, 50% 100%, 100% 50%);
+  transition: transform 0.2s linear;
+}
+
+
+
+
+
+
+/*------------tapa--------------*/
+
+
+
+
+
+
+.tapaEspecifica-dramatico-y-nocturno{
+  background:  url("../assets/dramatico_y_nocturno.jpg");
+  background-repeat: no-repeat;                                  /*  <-----------------------------------*/
+  background-size: 102.5%;
+  background-position: 53% 50%;
+   /*  si no tiene imagen para TAPA se ve de este color  */
+  background-color: rgba(255, 0, 0, 0);
+
+}
+
+
+/*-----------  VINILO  --------*/
+
+
+.vinilo__imagen{
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+
+  background-image: url("../assets/vinilo-real.png");
+  background-size: 135%;                                   /*  <-----------------------------------*/
+  background-repeat: no-repeat;
+  background-position: 47% 56%;
+  z-index: 20;
+  
+}
+
+
+
+
+.etiquetaEspecifica-dramatico-y-nocturno{
+  background-image: url("../assets/dramatico_y_nocturno.jpg");
+  background-size: 130%;
+  background-repeat: no-repeat;                         /*  <-----------------------------------*/
+  background-position: 47% 25%;
+ }
+
+
+/*--------------------------  fin  DRAMÁTICO Y NOCTURNO   ---------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------  HAMBRE   ---------------------------------------*/
+
+
+
+.imagenFondo-hambre{  /*  FONDO ESPECÍFICO DE CADA ALBUM   */
+/*   background-image: url("../assets/dramatico_y_nocturno.jpg");                   
+  background-size: 170%;
+  background-repeat: no-repeat;
+  background-position: 0% 63%; */
+  background: linear-gradient(120deg, rgb(240, 166, 141) 0, rgb(252, 76, 16) 70% ); 
+}
+
+
+
+
+.fondo__nombreAlbum-hambre{
+  color: rgb(227, 222, 222);                    /* <----------------------------------- */
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 20px auto 0px auto;
+}
+ 
+
+
+
+
+.lista__deslizante{
+  background-color: rgba(255, 0, 0, 0);             /*  <-----------------------------------*/
+}
+
+
+
+
+.link__nombreCancion-hambre {    
+  width: 240px;
+  font-size: 1rem;                              /*  <-----------------------------------*/
+  transition: transform 0.2s ease-in;
+  font-weight: 100;
+  color: rgb(13, 13, 13);
+}
+
+
+
+.link__nombreCancion-hambre:hover{
+  color: rgb(166, 165, 165);;                     /*  <-----------------------------------*/
+}
+
+
+
+
+.link__bordeBtnPlay-hambre{
+  border: 2px solid rgb(70, 69, 69);
+  background-color: transparent;
+  width: 22px;
+  height: 22px;                                    /*  <-----------------------------------*/
+  border-radius: 50%;
+  padding-top: 2px;
+  padding-right: 8px;
+  transition: .3s;
+}
+
+
+.link__bordeBtnPlay-hambre:hover{
+  background-color: rgba(240, 238, 238, 0.437);          /*  <-----------------------------------*/
+}
+
+ 
+.link__btnPlay-hambre{
+  width: 14px;
+  height: 14px;                                             /*  <-----------------------------------*/
+  background-color: rgb(217, 214, 214);
+  clip-path: polygon(50% 0%, 50% 100%, 100% 50%);
+  transition: transform 0.2s linear;
+}
+
+
+
+
+
+
+/*------------tapa--------------*/
+
+
+
+
+
+
+.tapaEspecifica-hambre{
+  background:  url("../assets/hambre.jpg");
+  background-repeat: no-repeat;                                  /*  <-----------------------------------*/
+  background-size: 102.5%;
+  background-position: 53% 50%;
+   /*  si no tiene imagen para TAPA se ve de este color  */
+  background-color: rgba(255, 0, 0, 0);
+
+}
+
+
+/*-----------  VINILO  --------*/
+
+
+
+
+
+.etiquetaEspecifica-hambre{
+ /*  background-image: url("../assets/etiqueta_hambre.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;                        
+ background-position: 47% -50%;  */
+ background: linear-gradient(120deg, rgb(240, 166, 141) 0, rgb(252, 76, 16) 70% );
+ }
+
+
+
+.etiqueta__nombre-hambre{
+  font-size: 12px;
+  color: aliceblue;
+  text-align: center;
+  margin-top: 18px;
+}
+
+/*--------------------------  fin  HAMBRE  ---------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------  DÍAS DE FUERZA   ---------------------------------------*/
+
+
+
+.imagenFondo-dias-de-fuerza{  /*  FONDO ESPECÍFICO DE CADA ALBUM   */
+  /*   background-image: url("../assets/dramatico_y_nocturno.jpg");                   
+    background-size: 170%;
+    background-repeat: no-repeat;
+    background-position: 0% 63%; */
+    background: linear-gradient(120deg, rgb(89, 133, 180) 0, rgb(255, 251, 248) 70% ); 
+  }
+  
+  
+  
+  
+  .fondo__nombreAlbum-dias-de-fuerza{
+    color: rgb(89, 133, 180);                    /* <----------------------------------- */
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 20px auto 0px auto;
+  }
+   
+  
+  
+  
+  
+  .lista__deslizante{
+    background-color: rgba(255, 0, 0, 0);             /*  <-----------------------------------*/
+  }
+  
+  
+  
+  
+  .link__nombreCancion-dias-de-fuerza {    
+    width: 240px;
+    font-size: 1rem;                              /*  <-----------------------------------*/
+    transition: transform 0.2s ease-in;
+    font-weight: 100;
+    color: rgb(89, 133, 180);
+  }
+  
+  
+  
+  .link__nombreCancion-dias-de-fuerza:hover{
+    color: rgb(123, 121, 121);;                     /*  <-----------------------------------*/
+  }
+  
+  
+  
+  
+  .link__bordeBtnPlay-dias-de-fuerza{
+    border: 2px solid rgb(70, 69, 69);
+    background-color: transparent;
+    width: 22px;
+    height: 22px;                                    /*  <-----------------------------------*/
+    border-radius: 50%;
+    padding-top: 2px;
+    padding-right: 8px;
+    transition: .3s;
+  }
+  
+  
+  .link__bordeBtnPlay-dias-de-fuerza:hover{
+    background-color: rgba(240, 238, 238, 0.437);          /*  <-----------------------------------*/
+  }
+  
+   
+  .link__btnPlay-dias-de-fuerza{
+    width: 14px;
+    height: 14px;                                             /*  <-----------------------------------*/
+    background-color: rgb(89, 133, 180);
+    clip-path: polygon(50% 0%, 50% 100%, 100% 50%);
+    transition: transform 0.2s linear;
+  }
+  
+  
+  
+  
+  
+  
+  /*------------tapa--------------*/
+  
+  
+  
+  
+  
+  
+  .tapaEspecifica-dias-de-fuerza{
+    background:  url("../assets/tapa_dias_de_fuerza.jpg");
+    background-repeat: no-repeat;                                  /*  <-----------------------------------*/
+    background-size: 102.5%;
+    background-position: 53% 50%;
+     /*  si no tiene imagen para TAPA se ve de este color  */
+    background-color: rgba(255, 0, 0, 0);
+  
+  }
+  
+  
+  /*-----------  VINILO  --------*/
+  
+  
+  
+  
+  
+  .etiquetaEspecifica-dias-de-fuerza{
+    background-image: url("../assets/tapa_dias_de_fuerza.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;                        
+   background-position: 47% -50%;  
+   /* background: linear-gradient(120deg, rgb(240, 166, 141) 0, rgb(252, 76, 16) 70% );
+    */
+  }
+  
+  
+  
+  .etiqueta__nombre-dias-de-fuerza{
+    font-size: 12px;
+    color: rgb(89, 133, 180);
+    text-align: center;
+    margin-top: 18px;
+  }
+  
+  /*--------------------------  fin  DÍAS DE FUERZA  ---------------------------------------*/
+  
+  
+  
+  
+  
+
+
+
+
+  
+
+
+
+
+
+/*--------------------------  LA ÚLTIMA ROTACIÓN DEL SOL   ---------------------------------------*/
+
+
+
+.imagenFondo-la-ultima-rotacion-del-sol{  /*  FONDO ESPECÍFICO DE CADA ALBUM   */
+  /*   background-image: url("../assets/dramatico_y_nocturno.jpg");                   
+    background-size: 170%;
+    background-repeat: no-repeat;
+    background-position: 0% 63%; */
+    background: linear-gradient(30deg, rgb(255, 251, 248) 0%, rgb(85, 152, 168) 30%); 
+  }
+  
+  
+  
+  
+  .fondo__nombreAlbum-la-ultima-rotacion-del-sol{
+    color: rgb(242, 246, 251);                    /* <----------------------------------- */
+    font-size: 1rem;
+    text-align: center;
+    margin: 20px auto 0px auto;
+  }
+   
+  
+  
+  
+  
+  .lista__deslizante{
+    background-color: rgba(255, 0, 0, 0);             /*  <-----------------------------------*/
+  }
+  
+  
+  
+  
+  .link__nombreCancion-la-ultima-rotacion-del-sol {    
+    width: 240px;
+    font-size: 1rem;                              /*  <-----------------------------------*/
+    transition: transform 0.2s ease-in;
+    font-weight: 100;
+    color: rgb(233, 20, 8);
+  }
+  
+  
+  
+  .link__nombreCancion-la-ultima-rotacion-del-sol:hover{
+    color: rgb(123, 121, 121);;                     /*  <-----------------------------------*/
+  }
+  
+  
+  
+  
+  .link__bordeBtnPlay-la-ultima-rotacion-del-sol{
+    border: 2px solid rgb(70, 69, 69);
+    background-color: transparent;
+    width: 22px;
+    height: 22px;                                    /*  <-----------------------------------*/
+    border-radius: 50%;
+    padding-top: 2px;
+    padding-right: 8px;
+    transition: .3s;
+  }
+  
+  
+  .link__bordeBtnPlay-la-ultima-rotacion-del-sol:hover{
+    background-color: rgba(240, 238, 238, 0.437);          /*  <-----------------------------------*/
+  }
+  
+   
+  .link__btnPlay-la-ultima-rotacion-del-sol{
+    width: 14px;
+    height: 14px;                                             /*  <-----------------------------------*/
+    background-color: rgb(233, 20, 8);
+    clip-path: polygon(50% 0%, 50% 100%, 100% 50%);
+    transition: transform 0.2s linear;
+  }
+  
+  
+  
+  
+  
+  
+  /*------------tapa--------------*/
+  
+  
+  
+  
+  
+  
+  .tapaEspecifica-la-ultima-rotacion-del-sol{
+    background:  url("../assets/tapa_la_ultima_rotacion_del_sol.jpg");
+    background-repeat: no-repeat;                                  /*  <-----------------------------------*/
+    background-size: 102.5%;
+    background-position: 53% 50%;
+     /*  si no tiene imagen para TAPA se ve de este color  */
+    background-color: rgba(255, 0, 0, 0);
+  
+  }
+  
+  
+  /*-----------  VINILO  --------*/
+  
+  
+  
+  
+  
+  .etiquetaEspecifica-la-ultima-rotacion-del-sol{
+    background-image: url("../assets/tapa_la_ultima_rotacion_del_sol.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;                        
+   background-position: 47% -50%;  
+   /* background: linear-gradient(120deg, rgb(240, 166, 141) 0, rgb(252, 76, 16) 70% );
+    */
+  }
+  
+  
+  
+  .etiqueta__nombre-la-ultima-rotacion-del-sol{
+    font-size: 12px;
+    color: rgb(89, 133, 180);
+    text-align: center;
+    margin-top: 18px;
+  }
+  
+  /*--------------------------  fin LA ÚLTIMA ROTACIÓN DEL SOL  ---------------------------------------*/
+  
+  
+
+/*/////////////////////////// FIN DE CÓDIGOS ESPECÍFICOS   /////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*//////////////////  running /  paused   ////////////////////////*/
+
+
+
+.running{
+  
+  animation-play-state: running;
+}
+
+.paused{
+  animation-play-state: paused;
+}
+
+
+
+  
+
