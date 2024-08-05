@@ -1,0 +1,137 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+
+ .h1-container h1{
+    width: 100%;
+    
+    text-align: center;
+    margin: 100px 0;
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+    transform: rotate(-20deg) translateX(-30px);
+}
+
+.h1-container span{
+    display: inline-block;
+    color: red;
+    transform: rotate(40deg) translateX(35px) translateY(30px);
+}
+
+hr{
+    visibility: hidden;
+}
+.img-container{
+    position: relative;
+    max-width: 500px;
+    height: auto;
+    top: -340px;
+    left: -60px;
+    
+    margin: 0 auto;
+    background-color: red;
+    transform: rotate(-12deg) translateX(60px) translateY(25px);
+}
+
+.img-container>*{
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.lista-bandas a{
+    text-decoration: none;
+}
+
+.general{
+    color: white;
+    text-align: center;
+}
+.encuesta{
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(45deg, rgb(40, 39, 39) 0, black 40%, rgb(40, 39, 39) 70%);
+}
+
+.lista-bandas{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: -40px auto 50px auto;
+  
+
+}
+
+.bandaContainer{
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    border-radius: 3px;
+    margin: 20px;
+    transition: .8s;
+}
+
+
+.bandaContainer:hover{
+    transform: scale(1.05);
+   
+}
+
+.bandaContainer__nombre{
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.bandaContainer__banda{
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 1rem .5rem white;
+    border-radius: 3px;
+}
+.dani{
+    background-image: url("../assets/dani_perez.jpg");
+}
+
+.pablo-comas{
+    background-image: url("../assets/comas_natural.jpg");
+    background-position: 50% 20%;
+}
+
+.jubany{
+    background-image: url("../assets/img-federico-oti.jpg");
+}
+
+.invernaculus{
+    background-image: url("../assets/img-jonatan-bravo.jpg");
+}
+
+
+.enlace-volver{
+    display: inline-block;
+    padding: 5px;
+    background-color: rgb(113, 112, 112);
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    
+    margin: 10px auto;
+}
